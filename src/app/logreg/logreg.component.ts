@@ -9,6 +9,8 @@ export class LogregComponent implements OnInit {
   
   getname='';
   getaddress='';
+  getgender='';
+  getdistrict='';
   getplace='';
   getmobile='';
   getemail='';
@@ -18,6 +20,25 @@ export class LogregComponent implements OnInit {
 
   onSubmit(data:NgForm){
     console.log(data.value);
+
+    this.getpass1=data.value.pass1;
+    console.log(data.value.pass1);
+
+this.getpass2=data.value.pass2;
+    console.log(data.value.pass2);
+
+if ( (this.getpass1=data.value.pass1)===(this.getpass2=data.value.pass2)) {
+
+  console.log('password matches');
+} 
+
+
+else {
+  console.log('incorrect password');
+}
+
+
+
   }
 
   constructor() { }
