@@ -1,0 +1,85 @@
+<div class="container">
+<div class="row">
+    <div class="col-sm-3 col-md-6">
+
+
+
+<form >
+    <table class="table">
+      <tr>
+        <td>Username</td><td><input type="text" class="form-control" name="name" ></td>
+      </tr>
+      <tr>
+        <td>Password</td><td><input type="text" class="form-control" name="psw" ></td>
+      </tr>
+  
+      <tr>
+        <td><button type="submit" class="btn btn-success">Login</button></td>
+      </tr>
+    </table>
+  </form>
+  </div>
+  <div class="col-sm-9 col-md-6">
+
+
+
+      <form (ngSubmit)=onSubmit(v) #v="ngForm">
+          <table class="table">
+            <tr>
+              <td>Name</td><td><input type="text" class="form-control" name="name" ngModel ></td>
+            </tr>
+            <tr>
+              <td>Address</td><td><input type="text" class="form-control" name="address" ngModel ></td>
+            </tr>
+        
+            <tr>
+              <td>Gender</td><td><input type="radio" name="gender" value="male" class="form-check-input" ngModel>male<br>
+                <input type="radio" name="gender" value="female"class="form-check-input" ngModel>female<br>
+                <input type="radio" name="gender" value="other" class="form-check-input" ngModel>Other
+              </td>
+            </tr>
+            <tr>
+              <td>District</td><td><select class="form-control" name="district" ngModel>
+                  <option value="Ernakulam" name="district" ngModel >Ernakulam</option>
+                  <option value="Thrissur" name="district" ngModel>Thrissur</option>
+                  <option value="Trivandrum"name="district" ngModel>Trivandrum</option>
+                  <option value="Kannur"name="district" ngModel>Kannur</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Place</td><td><input type="text" class="form-control" name="place" ngModel ></td>
+              </tr>
+
+
+              <tr>
+                  <td>Mobile</td><td><input type="text" class="form-control" name="mobile" ngModel ></td>
+                </tr>
+
+                <tr>
+                    <td>Email</td><td><input type="text" class="form-control" name="email" ngModel></td>
+                  </tr>
+
+
+                  <tr>
+                      <td>Username</td><td><input type="text" class="form-control" name="uname"  ngModel ></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td><td><input type="text" class="form-control" name="pass1" ngModel ></td>
+                      </tr>
+                      <tr>
+                          <td>Password</td><td><input type="text" class="form-control" name="pass2" ngModel ></td>
+                        </tr>
+
+            <tr>
+              <td><button type="submit" class="btn btn-success">Register</button></td>
+            </tr>
+            <tr>
+                <td><button type="reset" class="btn btn-reset">Reset</button></td>
+              </tr>
+          </table>
+        </form>
+  </div>
+
+
+  </div>
+</div>
