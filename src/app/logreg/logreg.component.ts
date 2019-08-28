@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import{NgForm} from '@angular/forms';
+import{ApiService} from '../api.service'
+
+
 @Component({
   selector: 'app-logreg',
   templateUrl: './logreg.component.html',
@@ -17,31 +20,40 @@ export class LogregComponent implements OnInit {
   getuname='';
   getpass1='';
   getpass2='';
+  
 
   onSubmit(data:NgForm){
     console.log(data.value);
 
-    this.getpass1=data.value.pass1;
-    console.log(data.value.pass1);
-
-this.getpass2=data.value.pass2;
-    console.log(data.value.pass2);
-
-if ( (this.getpass1=data.value.pass1)===(this.getpass2=data.value.pass2)) {
-
-  console.log('password matches');
-} 
 
 
-else {
-  console.log('incorrect password');
-}
 
 
+//     this.getpass1=data.value.pass1;
+//     console.log(data.value.pass1);
+
+// this.getpass2=data.value.pass2;
+//     console.log(data.value.pass2);
+
+// if ( (this.getpass1=data.value.pass1)===(this.getpass2=data.value.pass2)) {
+
+//   console.log('password matches');
+// } 
+
+
+// else {
+//   console.log('incorrect password');
+// }
+
+
+this.apiService.insertData(data.value).subscribe((response)=>{
+  console.log(response);
+  alert('Succesfully Inserted')
+})
 
   }
 
-  constructor() { }
+  constructor(private apiService:ApiService) { }
 
   ngOnInit() {
   }

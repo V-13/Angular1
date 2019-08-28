@@ -2,13 +2,13 @@
     
     
     
-    <form >
+    <form (ngSubmit)=onSubmit(f) #f="ngForm">
         <table class="table">
           <tr>
-            <td>Username</td><td><input type="text" class="form-control" name="name" ></td>
+            <td>Username</td><td><input type="text" class="form-control" name="name" ngModel ></td>
           </tr>
           <tr>
-            <td>Password</td><td><input type="text" class="form-control" name="psw" ></td>
+            <td>Password</td><td><input type="text" class="form-control" name="pass1"  ngModel></td>
           </tr>
       
           <tr>
